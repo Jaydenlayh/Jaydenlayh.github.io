@@ -8,32 +8,20 @@
 img {width: 500px;
 border-radius: 10px;
 }
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: black;
+header {
+  position: sticky;
+  top: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+h1{
+    margin: 0;
+    padding: 0;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: red;
-  color: black;
-}
 .box {
   background-color: green;
   overflow: hidden;
@@ -48,7 +36,7 @@ overflow: hidden;
     margin-left: 10px;
     margin-top: 10px;
     padding: 5px;
-    border: 2px solid blue;
+    border: 2px solid green;
     background-color: white;
 }
 /* Dropdown Button */
@@ -60,70 +48,132 @@ overflow: hidden;
   border: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.navbar {
+  overflow: hidden;
+  background-color: blue;
 }
 
-/* Dropdown Content (Hidden by Default) */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
+  float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  text-align: left;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.assa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
 </head>
 <body style="background-color:magenta;">
-  <div class="topnav">
-    <a class="active" href="index.html">HOME</a>
-    <div class="dropdown">
-      <button class="dropbtn">Family guy stuff</button>
-      <div class="dropdown-content">
-        <a href="gags/index.html">Top 6 moments</a>
-        <a href="stewie/index.html">stewie images</a>
-        <a href="peter/index.html">peter funni moments</a>
+
+  <header>
+    <div class="navbar">
+      <a href="index.html">Home|</a>
+      <div class="dropdown">
+        <button class="dropbtn">Family guy
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="gags/index.html">goofs and funni </a>
+          <a href="stewie/index.html">stewbie imag</a>
+          <a href="peter/index.html">something something petar</a>
+        </div>
+      </div>
+        <div class="dropdown">
+        <button class="dropbtn">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div>
-    <audio controls autoplay>
-      <source src="music/scatman.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+
+  </header>
+
+
   <br>
   <div class="box3">
     <font face = "Comic sans MS" size =" 5" style="color: black;">Hi, I'm Jayden, Why are you on my site?</font>
     <p style="color:black;">
-      Seriosly, this shit sucks, you prob should leave here. Leave please.
-      Ok fine you can stay but at least check out my buddy's twitch.
+      Actually though, this shit sucks, you prob should leave here. Leave please.
+      <br>
+      <br>
+
+      Ok fine you can stay but at least get a fucking life lol.
+      <br>
+      There are literally no reasons for you to be here, like I made this as a shitpost please leave
 
     </p>
   </div>
+
 
   <div class="box3">
     <p style="color:black;">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Why do i have this here, Its useless lol.
     </p>
   </div>
   <br>
+  <style media="screen">
+
+  </style>
+  <script src="js/index.js"></script>
