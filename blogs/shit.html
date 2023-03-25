@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/basestyle.css">
 </head>
 <body style="background-color: pink;">
+<h1 style="color: red;">HELLO WORLD, HERE IS A BLOG POST!!!!!!!!!!!!!!!!!~~~</h1>
 
-<h1 style="color: red;">This school sucks lol</h1>
-<p style = "color: red;">thats it thats the blog post, go home folks.</p>
+<div id="post">
+
+</div>
 
 <a href="../blog.html" style="color: blue;"> Back to blogs. </a>
+<script type="text/javascript">
+  var params = new URLSearchParams(location.search);
+  var ref = fetch("texts/" + params.get('refren'))
+    .then(
+      function (response) {
+        response.text().then(function(data) {
+        console.log(data);
+        const stringdata = data.split("\n");
+        for (var stringa in stringdata) {
+          console.log(stringdata[stringa]);
+          if (stringdata[stringa].startsWith("$")) {
+            var ass = document.createElement("img");
+            ass.src = (stringdata[stringa].replace("$", ""))
+            document.getElementById("post").appendChild(ass);
+          } else if (stringdata[stringa].startsWith("!")) {
+            var ass = document.createElement("h1");
+            ass.appendChild(document.createTextNode(stringdata[stringa].replace("!", "")));
+            document.getElementById("post").appendChild(ass);
+          } else {
+            var ass = document.createElement("p");
+            ass.appendChild(document.createTextNode(stringdata[stringa]));
+            document.getElementById("post").appendChild(ass);
+          }
+
+        }
+
+
+        });
+      });
+
+
+
+</script>
+
 </body>
 </html>

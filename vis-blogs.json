@@ -1,10 +1,10 @@
 {
   "1":{
-    "title":"HOW I BECAME THE SITTIEST PERSON EVER",
-    "ref":"blogs/shit.html"
+    "title":"Just some example text bs, Idk. praise it if you wanna <3",
+    "ref":"blogs/shit.html?refren=blog01.txt"
   },
   "2":{
-    "title":"shitagain",
-    "ref":"blogs/shit.html"
+    "title":"Holy Fucking Bingle",
+    "ref":"blogs/shit.html?refren=blog02.txt"
   }
 }
