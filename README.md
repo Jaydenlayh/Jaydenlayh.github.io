@@ -1,2 +1,0 @@
-# legitimatly kys
-do it
